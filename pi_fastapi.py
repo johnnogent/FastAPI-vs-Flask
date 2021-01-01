@@ -16,15 +16,9 @@ def api_pi(n : int):
     if x*x + y*y <=1:
       m += 1
   end = time.time()
-  valeur = 4*m/n
-  ecart = 100 * (valeur - math.pi) / math.pi
-  return {'valeur': valeur,
-			'ecart%': ecart,
-			'temps': end-start,
-			}
-
-'''
-@app.get("/items/{item_id}")
-def read_item(item_id: int, q: Optional[str] = None):
-    return {"item_id": item_id, "q": q}
-'''
+  value = 4*m/n
+  difference = 100 * (value - math.pi) / math.pi
+  return {'value': value,
+	'diff%': difference,
+	'time': end-start,
+	}
