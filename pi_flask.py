@@ -23,12 +23,12 @@ def api_pi():
     if x*x + y*y <=1:
       m += 1
   end = time.time()
-  valeur = 4*m/n
-  ecart = 100 * (valeur - math.pi) / math.pi
+  value = 4*m/n
+  difference = 100 * (value - math.pi) / math.pi
   return jsonify({
-			'valeur': valeur,
-			'ecart%': ecart,
-			'temps': end-start,
+			'value': value,
+			'diff%': difference,
+			'time': end-start,
 			})
   
 if __name__ == "__main__":
